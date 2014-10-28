@@ -1,0 +1,8 @@
+package edu.projecteuler.collatzsequence;
+
+public class CollatzSequence {
+
+	public static void main(String[] args) {
+
+	}
+}

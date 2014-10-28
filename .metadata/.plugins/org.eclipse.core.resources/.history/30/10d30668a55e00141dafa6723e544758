@@ -1,0 +1,31 @@
+package edu.projecteuler.circularprimes;
+
+import java.util.Arrays;
+
+public class CircularPrimes {
+
+	private static boolean isPrime(int x) {
+		final int end = (int) Math.sqrt(x);
+		for (int i = 2; i < end; ++i) {
+			if (x % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	private static int rotateNumber(int number) {
+		final String numString = Integer.toString(number);
+		final StringBuilder builder = new StringBuilder(numString);
+		for (int i = 0; i < builder.length() / 2; ++i) {
+			char swap = builder.charAt(i);
+			builder.setCharAt(i, builder.charAt(builder.length() - i - 1));
+			builder.setCharAt(builder.length() - i - 1 , swap);
+		}
+		return Integer.parseInt(builder.toString());
+	}
+
+	public static void main(String[] args) {
+		System.out.println(rotateNumber(123456) + "");
+	}
+}

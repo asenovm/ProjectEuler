@@ -1,0 +1,5 @@
+package edu.projecteuler.circularprimes;
+
+public class CircularPrimes {
+
+}

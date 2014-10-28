@@ -1,0 +1,14 @@
+package edu.projecteuler.numberlettercounts;
+
+public class NumberLetterCounts {
+
+	private static String getWordsForNumber(final int number) {
+		final StringBuilder builder = new StringBuilder();
+		final int hundreads = number / 100;
+		return builder.toString();
+	}
+
+	public static void main(String[] args) {
+		final String worded = getWordsForNumber(342);
+	}
+}

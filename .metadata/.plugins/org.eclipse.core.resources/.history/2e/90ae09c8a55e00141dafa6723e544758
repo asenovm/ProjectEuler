@@ -1,0 +1,23 @@
+package edu.projecteuler.circularprimes;
+
+import java.util.Arrays;
+
+public class CircularPrimes {
+
+	private static boolean isPrime(int x) {
+		final int end = (int) Math.sqrt(x);
+		for (int i = 2; i < end; ++i) {
+			if (x % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	private static List<Integer> getRotations(int number) {
+
+	};
+
+	public static void main(String[] args) {
+	}
+}

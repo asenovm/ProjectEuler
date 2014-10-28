@@ -1,0 +1,7 @@
+package edu.projecteuler.numberlettercounts;
+
+public class NumberLetterCounts {
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,49 @@
+package edu.projecteuler.numberlettercounts;
+
+public class NumberLetterCounts {
+
+	private static String getWordsForNumber(final int number) {
+		final StringBuilder builder = new StringBuilder();
+		final int hundreads = number / 100;
+		final int tenths = (number % 100) / 10;
+		final int ones = (number % 100) % 10;
+		System.out.println(getWordForDigit(hundreads));
+		System.out.println(getWordForDigit(tenths));
+		System.out.println(getWordForDigit(ones));
+		return builder.toString();
+	}
+
+	private static String getWordForTenth(int tenth){
+		
+	};
+	private static String getWordForDigit(int digit) {
+		switch (digit) {
+		case 0:
+			return "zero";
+		case 1:
+			return "one";
+		case 2:
+			return "two";
+		case 3:
+			return "three";
+		case 4:
+			return "four";
+		case 5:
+			return "five";
+		case 6:
+			return "six";
+		case 7:
+			return "seven";
+		case 8:
+			return "eight";
+		case 9:
+			return "nine";
+		default:
+			return "invalid";
+		}
+	}
+
+	public static void main(String[] args) {
+		final String worded = getWordsForNumber(342);
+	}
+}

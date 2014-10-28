@@ -1,0 +1,7 @@
+package edu.projecteuler.palindrome;
+
+public class Base2Palindrome {
+	public static void main(String[] args) {
+
+	}
+}
