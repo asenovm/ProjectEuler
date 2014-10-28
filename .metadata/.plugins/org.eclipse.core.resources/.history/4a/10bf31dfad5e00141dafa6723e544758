@@ -1,0 +1,7 @@
+package edu.projecteuler.truncatableprimes;
+
+public class TruncatablePrimes {
+	public static void main(String[] args) {
+
+	}
+}

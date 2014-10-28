@@ -1,0 +1,12 @@
+package edu.projecteuler.truncatableprimes;
+
+public class TruncatablePrimes {
+
+	private static int rightShift(int number) {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,23 @@
+package edu.projecteuler.truncatableprimes;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class TruncatablePrimes {
+
+	private List<Integer> getDigits(int number) {
+		final List<Integer> result = new LinkedList<>();
+		while(number > 0){
+			result.addFirst(number % 10);
+		}
+		return result;
+	}
+
+	private static int rightShift(int number) {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

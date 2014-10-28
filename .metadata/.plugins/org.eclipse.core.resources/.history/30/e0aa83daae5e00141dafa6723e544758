@@ -1,0 +1,35 @@
+package edu.projecteuler.truncatableprimes;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class TruncatablePrimes {
+
+	private static List<Integer> getDigits(int number) {
+		final List<Integer> result = new LinkedList<>();
+		while (number > 0) {
+			result.add(0, number % 10);
+			number = number / 10;
+		}
+		return result;
+	}
+
+	private static int digitsToNumber(List<Integer> digits) {
+		int result = 0;
+		for (int i = 0; i < digits.size(); ++i) {
+			result += digits.get(i) * Math.pow(10, i);
+		}
+		return result;
+	}
+
+	private static int rightShift(int number) {
+		final List<Integer> digits = getDigits(number);
+		digits.remove(0);
+		return digitsToNumber(digits);
+	}
+
+	public static void main(String[] args) {
+		rightShift(3797);
+		System.out.println(rightShift(3797));
+	}
+}
