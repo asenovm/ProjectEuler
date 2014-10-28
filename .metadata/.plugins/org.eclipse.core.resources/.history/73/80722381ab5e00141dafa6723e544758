@@ -1,0 +1,12 @@
+package edu.projecteuler.quadraticprimes;
+
+public class QuadraticPrimes {
+
+	private boolean isPrime(int x) {
+		int end = (int) (Math.sqrt(x) + 1);
+	}
+
+	public static void main(String[] args) {
+
+	}
+}
