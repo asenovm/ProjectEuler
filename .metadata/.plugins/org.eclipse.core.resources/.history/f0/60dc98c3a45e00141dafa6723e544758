@@ -1,7 +1,0 @@
-package edu.projecteuler.circularprimes;
-
-public class CircularPrimes {
-	public static void main(String[] args) {
-
-	}
-}
