@@ -1,7 +1,0 @@
-package edu.projecteuler.selfpowers;
-
-public class SelfPowers {
-	public static void main(String[] args) {
-
-	}
-}
