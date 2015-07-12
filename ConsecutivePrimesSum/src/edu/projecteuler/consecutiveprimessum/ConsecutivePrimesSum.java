@@ -9,6 +9,8 @@ public class ConsecutivePrimesSum {
 	private static List<Integer> getPrimesBelow(final int limit) {
 		final boolean[] primes = new boolean[limit];
 		Arrays.fill(primes, true);
+		primes[0] = false;
+		primes[1] = false;
 		int current = 2;
 		while (current < limit) {
 			int iter = current;
@@ -29,28 +31,32 @@ public class ConsecutivePrimesSum {
 		return result;
 	}
 
-	private static int getSumMembers(final int number,
-			final List<Integer> primes) {
-		int currentSum = 0;
-		int start = 0;
-		int iter = 0;
-		while (currentSum != number && start < primes.size()
-				&& primes.get(start) <= number) {
-			iter = start;
-			while (currentSum < number) {
-				currentSum += primes.get(iter);
-				++iter;
+	private static int getMaxPrimeSum(final List<Integer> primes) {
+		int maxLength = 0;
+		int maxNumber = 0;
+		for (int i = 0; i < primes.size(); ++i) {
+			final int currentPrime = primes.get(i);
+
+			for (int j = 0; j < i; ++j) {
+				int currentSum = 0;
+				int currentLength = 0;
+				for (int k = j; k < i; ++k) {
+					currentSum += primes.get(k);
+					++currentLength;
+					if (currentSum > currentPrime) {
+						break;
+					} else if ((currentSum == currentPrime) && (currentLength > maxLength)) {
+						maxLength = currentLength;
+						maxNumber = currentPrime;
+					}
+				}
 			}
-			if (currentSum == number) {
-				return iter - start;
-			}
-			++start;
 		}
-		return -1;
+		return maxNumber;
 	}
 
 	public static void main(String[] args) {
-		final List<Integer> primes = getPrimesBelow(1000001);
-		System.out.println("primes are " + getSumMembers(953, primes));
+		final List<Integer> primes = getPrimesBelow(1000000);
+		System.out.println(getMaxPrimeSum(primes));
 	}
 }
